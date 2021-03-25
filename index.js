@@ -28,7 +28,6 @@ class Airplane {
   // 👇 COMPLETE YOUR WORK BELOW 👇
   */
   
-  micTest
   /*
     TASK 1
       - Write a Person class whose constructor initializes `name` and `age` from arguments.
@@ -43,7 +42,22 @@ class Airplane {
   */
   
  class Person {
-    
+    constructor (name, age){
+      this.name = name;
+      this.age = age;
+      this.stomach = [];
+    }
+    eat(someFood){
+      if (this.stomach.length < 10){
+        this.stomach.push(someFood);
+      }
+    }
+    poop(){
+      this.stomach = [];
+    }
+    toString(){
+      return `${this.name}, ${this.age}`;
+    }
   }
   
   /*
